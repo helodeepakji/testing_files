@@ -1,10 +1,117 @@
+<!Doctype HTML>
 <html>
 <head>
-<title>learning</title>
+
+<style type="text/css">
+
+body{
+padding: 25px;
+
+}
+
+.dark-mode{
+
+background-color: black;
+color: white;
+}
+     
+     
+     .switch {
+     position: relative;
+     display: inline-block;
+     width: 20px;
+     height: 34px;
+     }
+     
+     .switch input {
+     opacity: 0;
+     }
+     
+    .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     border-radius:34%;
+     background-color: #ccc;
+     -webkit-transition: .4s;
+     transition: .4s;
+     }
+     
+     .slider:before {
+     position: absolute;
+     content: "";
+     height: 26px;
+     width: 26px;
+     left: 20px;
+     bottom: 4px;
+     border-radius:50%;
+     background-color: grey;
+     -webkit-transition: .4s;
+     transition: .4s;
+     }
+     
+
+
+
+
+
+input:Checked + .slider{
+background-color: pink;
+
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
 </head>
 <body>
 
-<h1>wow link is working</h1>
+<label class="switch">
+<input type="checkbox" onclick="myfun()">
+<span class="slider round"></span> 
+</label>
+
+
+
+<script type="text/javascript">
+
+function myfun(){
+
+var element= document.body;
+element.classList.toggle("dark-mode");
+
+
+}
+
+
+</script>
+
+
+
+
 
 </body>
 </html>
