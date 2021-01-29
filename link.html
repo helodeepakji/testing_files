@@ -34,14 +34,11 @@
     
 
 
-    <?php include 'model/navbar.php'; ?>
-        <?php include 'model/slider.php'?>
-        <?php include 'model/sqliconn.php'; ?>
-        <div class="container my-4 ">
+
         <h2 class="text-center">iMISS</h2>
         </div>
         <div class="row1">
-            <?php 
+       
             $sql= "SELECT * FROM `cata`";
             $result=mysqli_query($conn,$sql);
             while($row=mysqli_fetch_assoc($result)){
